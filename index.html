@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div class="container">
+            <h1>🎓 Online Test System</h1>
+
+            <div id="startScreen">
+
+                <input type="text" id="studentName" placeholder="Ismingizni kiriting">
+
+                <select id="subjectSelect">
+                    <option value="">Fan tanlang</option>
+                    <option value="math">Matematika</option>
+                    <option value="english">English</option>
+                    <option value="history">Tarix</option>
+                    <option value="it">Informatika</option>
+                    <option value="science">Kimyo</option>
+                </select>
+
+                <button onclick="startTest()">Testni boshlash</button>
+
+                <p id="startQuote" style="margin-top:15px; font-style: italic; color:#555;"></p>
+            </div>
+
+            <div id="quizScreen" class="hidden">
+                <div class="top-bar">
+                    <div id="progressText"></div>
+                    <div id="timer"></div>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+
+                <div id="questionContainer"></div>
+
+                <button id="nextBtn" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <div id="resultScreen" class="hidden">
+                <h2>📊 Test Natijasi</h2>
+                <div id="resultBox" class="result-box">
+                    <p><strong>To‘g‘ri javoblar:</strong> <span id="correctAnswers"></span></p>
+                    <p><strong>Foiz:</strong> <span id="percentage"></span></p>
+                    <p><strong>Baho:</strong> <span id="letterGrade"></span></p>
+                    <p><strong>Daraja:</strong> <span id="degree"></span></p>
+                    <p><strong>Status:</strong> <span id="status"></span></p>
+                    <p id="message"></p>
+                </div>
+                <p id="resultQuote" style="font-style: italic; color:#555;"></p>
+                <button onclick="location.reload()">Qayta topshirish</button>
+                <h3>Oxirgi urinishlar</h3>
+                <div id="history"></div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
